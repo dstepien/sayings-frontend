@@ -3,7 +3,8 @@
     <div class="col-xs-2"></div>
     <div id="content" class="col-xs-8" style="margin-top: 160px;">
       <blockquote>
-        <p><%= @saying %></p>
+        <p><%= @saying['content'] %></p>
+        <footer><%= @saying['author'] %></footer>
       </blockquote>
     </div>
     <div class="col-xs-2"></div>
