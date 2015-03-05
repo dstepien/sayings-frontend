@@ -1,0 +1,19 @@
+<div id="main-container" class="container">
+  <div class="row">
+    <div class="alert alert-danger">
+      <h4>Are you sure you want to delete this saying?</h4>
+      <blockquote>
+        <p><%= @saying['content'] %></p>
+        <footer><%= @saying['author'] %></footer>
+      </blockquote>
+      <p>
+        <form action="" method="post">
+          <input type="hidden" name="id" value="<%= @saying['id'] %>">
+          <input type="hidden" name="confirmation" value="1">
+          <button type="submit" class="btn btn-danger">Yes, delete it!</button>
+          <%= link_to 'No, go back', {controller: 'sayings', action: 'index'}, class: 'btn btn-default' %>
+        </form>
+      </p>
+    </div>
+  </div>
+</div>

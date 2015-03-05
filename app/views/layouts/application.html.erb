@@ -2,11 +2,27 @@
 <html>
 <head>
   <title>Say</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <%= link_to 'Sayings', { controller: 'index' }, class: 'navbar-brand' %>
+      <ul class="nav navbar-nav">
+        <li>
+          <%= link_to 'New', controller: 'sayings', action: 'new' %>
+        </li>
+        <li>
+          <%= link_to 'List', controller: 'sayings', action: 'index' %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <%= yield %>
 

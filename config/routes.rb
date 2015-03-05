@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
   get 'index/index'
+
+  get 'sayings/new'
+  get 'sayings/index'
+  get 'sayings/remove'
+
+  post 'sayings/new'
+  post 'sayings/remove'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

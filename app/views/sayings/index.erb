@@ -1,0 +1,31 @@
+<div id="main-container" class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Sayings List</h1>
+    </div>
+    <div class="col-xs-12">&nbsp;</div>
+    <div class="col-xs-12"><%= flash_messages %></div>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>Author</th>
+        <th>Content</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @sayings.each_with_index do |saying, i| %>
+          <tr>
+            <th scope="row"><%= i + 1 %></th>
+            <td><%= saying['author'] %></td>
+            <td><%= saying['content'] %></td>
+            <td style="vertical-align: middle;">
+              <%= link_to 'Remove', {controller: 'sayings', action: 'remove', id: saying['id']}, class: 'btn btn-danger btn-xs' %>
+            </td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
