@@ -1,0 +1,13 @@
+<div class="col-xs-12">
+  <form action="" method="post">
+    <div class="form-group">
+      <label for="saying">Saying</label>
+      <input type="text" name="saying" class="form-control" id="saying" maxlength="255" placeholder="Enter saying" value="<%= @saying['content'] %>">
+    </div>
+    <div class="form-group">
+      <label for="author">Author</label>
+      <input type="text" name="author" class="form-control" id="author" maxlength="255" placeholder="Enter author" value="<%= @saying['author'] %>">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
